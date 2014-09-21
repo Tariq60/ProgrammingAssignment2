@@ -1,12 +1,14 @@
 #####################################
-##Author: Tariq Alhindi
+## Author: Tariq Alhindi          September 9/21/2014
 ##
-##Creating two functions that get a matrix and calculate its inverse for the first
+## Creating two functions that get a matrix and calculate its inverse for the first
+## time and then stores it (cache it) to avoid recalculations in future function calls
 #####################################
 
-## Write a short comment describing this function
 
 
+# This function gets a matrix as an argument creates a "special" matrix 
+# with needed getters and setters to be used later for caching
 
 makeCacheMatrix <- function(x = matrix()) {
   
@@ -35,7 +37,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+
+
+# This function get a "special" matrix as an argument and calcuate its inverse
+# or gets the cached value of the inverse in case it has been calculated before
 
 cacheSolve <- function(x, ...) {
   
